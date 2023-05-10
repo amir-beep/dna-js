@@ -1,0 +1,46 @@
+.dna-container {
+    width: 100px;
+    height: 200px;
+    position: relative;
+    animation: rotate 2s linear infinite; /* Animation for rotation */
+  }
+  
+  .dna-strand {
+    width: 10px;
+    height: 100%;
+    background-color: #3366ff; /* blue color for DNA strand */
+    position: absolute;
+  }
+  
+  /* Positioning the two DNA strands */
+  .dna-strand:first-child {
+    left: 45%;
+  }
+  
+  .dna-strand:last-child {
+    right: 45%;
+  }
+  
+  /* Adding the spiral effect to DNA strands */
+  .dna-strand:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ffffff; /* white color for the spiral effect */
+    position: absolute;
+    transform-origin: center center;
+    transform: rotate(45deg);
+  }
+  
+  /* Animation keyframes for rotation */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
